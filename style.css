@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17A2BB;
+    min-height: 100vh;
+}
+.wrapper{
+    width: 450px;
+    border-radius: 7px;
+    background: #fff;
+    padding: 30px 25px 40px;
+
+}
+.wrapper:where(textarea,input,select,button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.wrapper textarea{
+    height: 270px;
+    resize: none;
+    padding: 8px 13px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.wrapper .file-options{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+button{
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+    padding: 5px 5px;
+}
+.file-options .option {
+    width: calc(100%/2 -8px);
+}
+
+input{
+    height: 25px;
+    padding: 0 15px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+select{
+    height: 25px;
+    padding: 0 15px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+button{
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: #17A2BB;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.wrapper textarea:valid ~ .save-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
